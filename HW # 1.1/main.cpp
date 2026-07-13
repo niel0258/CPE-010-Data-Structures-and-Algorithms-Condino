@@ -6,7 +6,8 @@ bool boolCompare(bool bool1,bool bool2);
 
 int main(){
     std::cout << "1+1 ="<< sumOfTwoNum(1,1) << "\n";
-    std::cout << "3 is greater than 4:"<< isGreaterThan(3,4)<< "\n";
+    std::string isBigger = isGreaterThan(3,4) ? " True": "False";
+    std::cout << "3 is greater than 4:"<< isBigger<< "\n";
     std::cout << boolCompare(true,false);
     return 0;
 }
