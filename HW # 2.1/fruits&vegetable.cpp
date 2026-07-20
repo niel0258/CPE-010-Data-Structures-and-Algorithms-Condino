@@ -60,7 +60,9 @@ int main() {
     Fruit *banana = new Fruit("Banana",10,8);
     Vegetable *broccolli = new Vegetable("Broccolli",60,12);
     Vegetable *lettuce = new Vegetable("Lettucce",50,10);  
-
+    
+    std::cout << "\nOriginal List\n";
+    
     //Problem number 2
     std::array<Consumable*,arr_size> GroceryList = {apple,banana,broccolli,lettuce};
 
@@ -77,6 +79,13 @@ int main() {
     delete lettuce;
     lettuce = nullptr;
     GroceryList[3] = nullptr;
+
+    std::cout << "\nNew List\n";
+
+    for (const auto& item:GroceryList){
+        if (item == nullptr) continue;
+        item->printDetails();
+    }
 
     int totalSumObj2 = getTotalSum(GroceryList);//Check the total objects now
 
