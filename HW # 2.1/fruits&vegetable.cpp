@@ -143,7 +143,18 @@ Fruit::Fruit(const Fruit &copyFruit){
     name = copyFruit.name;
     price = copyFruit.price;
     addedQuantity = copyFruit.addedQuantity;
-    quantity[name] += copyFruit.addedQuantity;
+}
+
+Fruit& Fruit::operator=(const Fruit &copyFruit) {
+    if (this == &copyFruit) {
+        return *this; 
+    }
+
+    name = copyFruit.name;
+    price = copyFruit.price;
+    addedQuantity = copyFruit.addedQuantity;
+
+    return *this;
 }
 
 //=============================================== VEGETABLE METHODS =======================================
@@ -163,7 +174,18 @@ Vegetable::Vegetable(const Vegetable &copyVegetable){
     name = copyVegetable.name;
     price = copyVegetable.price;
     addedQuantity = copyVegetable.addedQuantity;
-    quantity[name] = copyVegetable.addedQuantity;
+}
+
+Vegetable& Vegetable::operator=(const Vegetable &copyVegetable){
+    if (this == &copyVegetable) {
+        return *this; 
+    }
+
+    name = copyVegetable.name;
+    price = copyVegetable.price;
+    addedQuantity = copyVegetable.addedQuantity;
+
+    return *this;
 }
 
 //Problem 3 Solution
