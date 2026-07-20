@@ -1,7 +1,6 @@
 #include <iostream>
 #include <map>
 #include <string>
-#include <array>
 #include <span>
 
 //Base Class
@@ -64,7 +63,7 @@ int main() {
     std::cout << "\nOriginal List\n";
     
     //Problem number 2
-    std::array<Consumable*,arr_size> GroceryList = {apple,banana,broccolli,lettuce};
+    Consumable* GroceryList[arr_size]  = {apple,banana,broccolli,lettuce};
 
     for (const auto& item:GroceryList){
         item->printDetails();
@@ -90,6 +89,16 @@ int main() {
     int totalSumObj2 = getTotalSum(GroceryList);//Check the total objects now
 
     std::cout << "Number of objects in the array: " << totalSumObj2 << "\n";
+
+    //Cleanup
+    for (auto& item:GroceryList){
+        if (item == nullptr) continue;
+        delete item;
+        item = nullptr;
+    }
+
+    apple = banana = nullptr;
+    broccolli = nullptr;
 
     return 0;
 }
@@ -163,7 +172,7 @@ int getTotalSum(std::span<Consumable*> GroceryList){
 
     for (const Consumable* item: GroceryList){
         if (item == nullptr) continue;
-        totalSum += item->getQuantity();
+        totalSum ++;
     }
 
     return totalSum;
