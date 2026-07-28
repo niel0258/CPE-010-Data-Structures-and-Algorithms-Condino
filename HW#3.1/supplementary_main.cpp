@@ -2,7 +2,7 @@
 #include <string>
 #include "doubly_ll.h"
 #include "simple_menu.h"
-#include "wait_funcs.h"
+#include "misc.h"
 
 void appStart();
 void appMain(DoubleList<std::string>** headPtr);
@@ -11,7 +11,6 @@ void insertSongs(DoubleList<std::string>** headPtr);
 void playSongsOneByOne(DoubleList<std::string>** headPtr);
 int songActionMenu(DoubleList<std::string>** currentNode);
 void playLoopedSongs( DoubleList<std::string>* headPtr);
-std::string getCleanTitle(std::string message);
 
 int main(){
     appStart();
@@ -32,7 +31,7 @@ void appStart(){
         appMain(&playlistHead);
     }
 
-    system("clear");
+    clearScreen();
 
     std::cout << "App exited";
 
@@ -42,12 +41,12 @@ void appStart(){
 void appMain(DoubleList<std::string>** headPtr){
     bool hasExited = false;
 
-    system("clear");
+    clearScreen();
 
     while (!hasExited){
             //Insert first song
         if (*headPtr == nullptr){
-            std::string songName = getCleanTitle("Please enter first song name:");
+            std::string songName = getNoneEmptyString("Please enter first song name:");
 
             *headPtr = createNewNode(songName);
 
@@ -74,11 +73,11 @@ int actionMenu(DoubleList<std::string>** headPtr){
             break;
         }
         case 1:{
-            system("clear");
-            std::string toBeRemoved = getCleanTitle("Enter the name of the song you want to remove:");
+            clearScreen();
+            std::string toBeRemoved = getNoneEmptyString("Enter the name of the song you want to remove:");
             dllDeleteNode(toBeRemoved, headPtr,"Song Not Found\n","Song successfully deleted");
             waitS(2);
-            system("clear");
+            clearScreen();
             break;
         }
         case 2:{
@@ -97,7 +96,7 @@ int actionMenu(DoubleList<std::string>** headPtr){
 }
 
 void insertSongs(DoubleList<std::string>** headPtr){
-    system("clear");
+    clearScreen();
     Menu insertSongMenu = Menu(3,"Where to insert song");
     insertSongMenu.EditMenu(0, "Start");
     insertSongMenu.EditMenu(1, "Pick a place");
@@ -105,7 +104,7 @@ void insertSongs(DoubleList<std::string>** headPtr){
 
     int choice = insertSongMenu.NavigateMenu();
 
-    std::string songName = getCleanTitle("Enter song name:");
+    std::string songName = getNoneEmptyString("Enter song name:");
 
     switch (choice) {
         case 0:
@@ -117,17 +116,17 @@ void insertSongs(DoubleList<std::string>** headPtr){
             DoubleList<std::string>* foundNode = nullptr;
             int tries = 3;
             do{
-                std::string besideSongName = getCleanTitle("Put next to what song:");
+                std::string besideSongName = getNoneEmptyString("Put next to what song:");
 
                 foundNode = dllFindValue(*headPtr, besideSongName);
 
-                system("clear");
+                clearScreen();
                 //Error correction
                 if (foundNode == nullptr) std::cout << "Song not found, please retype\n";
                 std::cout << "Tries left " << --tries << '\n';
 
             } while (foundNode == nullptr && tries > 0);
-            system("clear");
+            clearScreen();
             dllGenInsert(songName, foundNode);
             break;
         }
@@ -207,7 +206,7 @@ int songActionMenu(DoubleList<std::string>** currentNode){
 }
 
 void playLoopedSongs(DoubleList<std::string>* headPtr){
-    system("clear");
+    clearScreen();
     DoubleList<std::string>* tail = headPtr;
     
     //Connect the list tail to its head to allow circular access
@@ -243,18 +242,4 @@ void playLoopedSongs(DoubleList<std::string>* headPtr){
             continueLoop = false;
         }
     }
-}
-
-std::string getCleanTitle(std::string message){
-    std::string returnString = "";
-    while (returnString.empty()){
-        std::cout << message;
-        getline(std::cin,returnString);
-        if (returnString.empty()) {
-            std::cout << "Input cannot be empty\n";
-            waitS(2);
-            system("clear");
-        }
-    }
-    return returnString;
 }
