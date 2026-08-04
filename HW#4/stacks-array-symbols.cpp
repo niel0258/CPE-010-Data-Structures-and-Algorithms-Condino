@@ -31,8 +31,8 @@ void balanceSign(std::string input);
 int main(){
     //balanceSign("(A+B)+(C-D)");
     //balanceSign("((A+B)+(C-D)");
-    //balanceSign("(A+B)+[C-D])");
-    balanceSign("((A+B]+[C-D]}");
+    balanceSign("((A+B)+[C-D])");
+    //balanceSign("((A+B]+[C-D]}");
     return 0;
 }
 
