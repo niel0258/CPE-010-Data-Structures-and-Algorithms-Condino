@@ -63,7 +63,7 @@ T Top(){
     // error catching:
     if(isEmpty<T>()){
         std::cout<<"Stack underflow "<<std::endl;
-        return T();
+        return T();//return default "void" value
     }
     // display the Top node
     return head<T>->data;
