@@ -31,16 +31,24 @@ BinaryTree<T>::BinaryTree(T rootObj){
     rightChild = nullptr;
 }
 
+template<typename T>
+BinaryTree<T>::~BinaryTree(){
+    delete leftChild;
+    delete rightChild;
+}
+
 
 template<typename T>
 void BinaryTree<T>::insertLeftChild(T newNode){
     if (leftChild == nullptr){
         leftChild = new BinaryTree<T>(newNode);
     }
-    BinaryTree<T> *newChild = new BinaryTree<T>(newNode);
-    //galawin ang anak sa ilalim ng bagong node
-    newChild->leftChild = leftChild;
-    leftChild = newChild;
+    else {
+        BinaryTree<T> *newChild = new BinaryTree<T>(newNode);
+        //galawin ang anak sa ilalim ng bagong node
+        newChild->leftChild = leftChild;
+        leftChild = newChild;
+    }
 }
 
 template<typename T>
@@ -48,10 +56,12 @@ void BinaryTree<T>::insertRightChild(T newNode){
     if (rightChild == nullptr){
         rightChild = new BinaryTree<T>(newNode);
     }
-    BinaryTree<T> *newChild = new BinaryTree<T>(newNode);
-    //galawin ang anak sa ilalim ng bagong node
-    newChild->rightChild = rightChild;
-    rightChild = newChild;
+    else{
+        BinaryTree<T> *newChild = new BinaryTree<T>(newNode);
+        //galawin ang anak sa ilalim ng bagong node
+        newChild->rightChild = rightChild;
+        rightChild = newChild;
+    }
 }
 
 template<typename T>
