@@ -12,20 +12,31 @@ int main(){
 
     //create an array with unsorted list
     int unsortedArr[maxSize];
+    int unsortedArr2[maxSize];
     // use time (0) as seed for random
     srand(time(0));
     //populate the array with random val
     for(int i = 0; i < maxSize; i++){
         unsortedArr[i] = rand()%100;
+        unsortedArr2[i] = rand()%100;
     }
     
     std::cout << "Unsorted Array:\n";
     //display the randomly generated arr
     displayArr(unsortedArr);
-    std::cout << "\nSorted using quick sort\n";
-    quickSort(unsortedArr,0,maxSize-1);
+    //std::cout << "\nSorted using quick sort\n";
+    //quickSort(unsortedArr,0,maxSize-1);
+    std::cout << "\nSorted using partition shell and merge\n";
+    partiMerge(unsortedArr, 0, maxSize-1);
+    partiShell(unsortedArr2, maxSize);
 
-    std::cout << "\nSorted Array:\n";
+    //std::cout << "\nSorted Array:\n";
+    //displayArr(unsortedArr);
+
+    std::cout << "\nSorted Array 1:\n";
+    displayArr(unsortedArr);
+
+    std::cout << "\nSorted Array 2:\n";
     displayArr(unsortedArr);
 
     return 0;
