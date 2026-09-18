@@ -60,6 +60,7 @@ void BinarySearchTree<T>::insert(T val){
     }
 }
 
+//R L RI
 template<typename T>
 void BinarySearchTree<T>::preOrder(){
     std::cout << key << ' ';
@@ -71,6 +72,7 @@ void BinarySearchTree<T>::preOrder(){
     }
 }
 
+//L,R,RI
 template<typename T>
 void BinarySearchTree<T>::inOrder(){
     if (left != nullptr){
@@ -82,6 +84,7 @@ void BinarySearchTree<T>::inOrder(){
     }
 }
 
+//L,RI,R
 template<typename T>
 void BinarySearchTree<T>::postOrder(){
     if (left != nullptr){

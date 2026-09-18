@@ -3,9 +3,9 @@
 
 int main(){
     //create ugat
-    BinarySearchTree<int> tree(20);
+    BinarySearchTree<int> tree(2);
     const int size = 7;
-    int treeArr[size] = {20,10,5,70,60,80,50};
+    int treeArr[size] = {3,9,18,0,1,4,5};
 
     for (int i = 0; i < size; i++){
         //std::cout << treeArr[i] << '\n';
