@@ -1,8 +1,8 @@
 # CPE-010-Data-Structures-and-Algorithms-Condino
 ### Portfolio of Condino,Niel Vincent B.
 <hr>
-<img width="512" height="171" alt="19-36-07-662_512" src="https://github.com/user-attachments/assets/886aee78-c74a-4737-81ba-c46d9d155d82" />
-
+<img width="1280" height="720" alt="h98ct9hz24k41" src="https://github.com/user-attachments/assets/0942b8f4-1c8b-48fd-8606-e1e1478b0c45" />
+<hr>
 <br>
 <h3>Course Objective:</h3>
 <hr>
