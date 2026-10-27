@@ -1,6 +1,8 @@
 # CPE-010-Data-Structures-and-Algorithms-Condino
 ### Portfolio of Condino,Niel Vincent B.
 <hr>
+<img width="512" height="171" alt="19-36-07-662_512" src="https://github.com/user-attachments/assets/886aee78-c74a-4737-81ba-c46d9d155d82" />
+
 <br>
 <h3>Course Objective:</h3>
 <hr>
@@ -28,9 +30,36 @@ good programming styles in C++</li>
 
 
 # TOPICS
+<h2>PRELIM</h2>
 <ul>
-  <li><a href = https://github.com/niel0258/CPE-010-Data-Structures-and-Algorithms-Condino/tree/main/PRELIM>PRELIM</li>
-    <li><a href = https://github.com/niel0258/CPE-010-Data-Structures-and-Algorithms-Condino/tree/main/MIDTERM>MIDTERM</li>
-    <li><a href = https://github.com/niel0258/CPE-010-Data-Structures-and-Algorithms-Condino/tree/main/FINALS>FINALS</li>
-  </li>
+    <li><a href="https://github.com/niel0258/CPE-010-Data-Structures-and-Algorithms-Condino/tree/main/PRELIM/HOA%201.1">Hands-on Activity 1.1</a></li>
+    <li><a href="https://github.com/niel0258/CPE-010-Data-Structures-and-Algorithms-Condino/tree/main/PRELIM/HOA%202.1">Hands-on Activity 2.1</a></li>
+    <li><a href="https://github.com/niel0258/CPE-010-Data-Structures-and-Algorithms-Condino/tree/main/PRELIM/HOA%203.1">Hands-on Activity 3.1</a></li>
+    <li><a href="https://github.com/niel0258/CPE-010-Data-Structures-and-Algorithms-Condino/tree/main/PRELIM/HOA%204.1">Hands-on Activity 4.1</a></li>
+    <li><a href="https://github.com/niel0258/CPE-010-Data-Structures-and-Algorithms-Condino/tree/main/PRELIM/HOA%205.1">Hands-on Activity 5.1</a></li>
+    <li><a href="https://github.com/niel0258/CPE-010-Data-Structures-and-Algorithms-Condino/tree/main/PRELIM/PRELIM%20EXAM">PRELIM EXAM</a></li>
+    <li><a href="https://github.com/niel0258/CPE-010-Data-Structures-and-Algorithms-Condino/tree/main/PRELIM/SW%201.1">Seatwork<img width="512" height="171" alt="19-36-07-662_512" src="https://github.com/user-attachments/assets/0c4e5b0e-6be2-447d-8500-a8025f1086e7" />
+<img width="512" height="171" alt="19-36-07-662_512" src="https://github.com/user-attachments/assets/d0cb39ab-33f5-417e-b788-3aef5f66a9d9" />
+ 1.1</a></li>
+</ul>
+
+<hr>
+
+<h2>MIDTERM</h2>
+<ul>
+    <li><a href="https://github.com/niel0258/CPE-010-Data-Structures-and-Algorithms-Condino/tree/main/MIDTERM/HOA%206">Hands-on Activity 6</a></li>
+    <li><a href="https://github.com/niel0258/CPE-010-Data-Structures-and-Algorithms-Condino/tree/main/MIDTERM/HOA%207">Hands-on Activity 7</a></li>
+    <li><a href="https://github.com/niel0258/CPE-010-Data-Structures-and-Algorithms-Condino/tree/main/MIDTERM/HOA%208">Hands-on Activity 8</a></li>
+    <li><a href="https://github.com/niel0258/CPE-010-Data-Structures-and-Algorithms-Condino/tree/main/MIDTERM/HOA%209">Hands-on Activity 9</a></li>
+    <li><a href="https://github.com/niel0258/CPE-010-Data-Structures-and-Algorithms-Condino/tree/main/MIDTERM/HOA%2010">Hands-on Activity 10</a></li>
+</ul>
+
+<hr>
+
+<h2>FINALS</h2>
+<ul>
+    <li><a href="https://github.com/niel0258/CPE-010-Data-Structures-and-Algorithms-Condino/tree/main/FINALS/HOA%2011">Hands-on Activity 11</a></li>
+    <li><a href="https://github.com/niel0258/CPE-010-Data-Structures-and-Algorithms-Condino/tree/main/FINALS/HOA%2012">Hands-on Activity 12</a></li>
+    <li><a href="https://github.com/niel0258/CPE-010-Data-Structures-and-Algorithms-Condino/tree/main/FINALS/HOA%2013">Hands-on Activity 13</a></li>
+    <li><a href="https://github.com/niel0258/CPE-010-Data-Structures-and-Algorithms-Condino/tree/main/FINALS/HOA%2014">Hands-on Activity 14</a></li>
 </ul>
